@@ -4,6 +4,14 @@
 
 /* My code */
 
+header img {
+	height: 1em;
+}
+
+#banner p {
+	font-weight: bolder;
+}
+
 #njszt {
 	padding-bottom: 1.6em;
 }
