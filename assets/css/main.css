@@ -4,6 +4,11 @@
 
 /* My code */
 
+.fullrow {
+	text-align: center;
+	font-weight: bold;
+}
+
 .totalscore {
 	font-weight: bold;
 }
@@ -16,7 +21,7 @@
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
 	.scores {
 		display: none;
 	}
@@ -25,6 +30,28 @@
 @media only screen and (max-width: 650px) {
 	.school {
 		display: none;
+	}
+}
+
+#main {
+	table-layout: fixed;
+}
+
+#main table th {
+	font-size: 13pt;
+}
+
+#main table td {
+	font-size: 13pt;
+}
+
+@media only screen and (max-width: 1500px) {
+	#main table th {
+		font-size: 11pt;
+	}
+
+	#main table td {
+		font-size: 11pt;
 	}
 }
 
