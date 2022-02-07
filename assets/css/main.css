@@ -3950,3 +3950,26 @@ table.content ul {
 			}
 
 	}
+	
+	.Osszpont{
+		font-weight: bold;
+	}
+	.Csapatnev{
+		font-weight: bold;
+	}
+	.Helyezes{
+		font-weight: bold;
+	}
+	@media only screen and (max-width: 1200px) {
+		.pontok{
+			display: none;
+		}
+	}
+	@media only screen and (max-width: 650px) {
+		.iskola{
+			display: none;
+		}
+	}
+	.fejlec {
+		font-weight: bold;
+	}
