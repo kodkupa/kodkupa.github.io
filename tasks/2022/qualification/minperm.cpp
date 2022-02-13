@@ -1,10 +1,10 @@
-// Minperm megoldás
+// Minperm megoldas
 
-// Vegyük észre hogy a lehetséges cseréket egy gráf éleinek, a pozíciókat pedig
-// csúcsainak vehetjük. Ekkor az lesz optimális hogy minden összefüggőségi
-// komponensben a növekvő sorrendben vannak számok (belátható hogy bármilyen
-// sorrendet előállíthatunk) A komponenst valamilyen bejárással vagy DSU-val
-// határozhatjuk meg.
+// Vegyuk eszre hogy a lehetseges csereket egy graf eleinek, a poziciokat pedig
+// csucsainak vehetjuk. Ekkor az lesz optimalis hogy minden osszefuggosegi
+// komponensben a novekvo sorrendben vannak szamok (belathato hogy barmilyen
+// sorrendet eloallithatunk) A komponenst valamilyen bejarassal vagy DSU-val
+// hatarozhatjuk meg.
 
 #include <bits/stdc++.h>
 using namespace std;

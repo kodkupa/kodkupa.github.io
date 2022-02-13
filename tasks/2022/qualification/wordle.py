@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-# Szózat megoldás
+# Szozat megoldas
 
-# Ha n hosszú a szó és már k karakter fix akkor az első nem fix karakter
-# (26-k)-féleképpen választható, a második (26-k-1)-féleképpen, majd
-# (26-k-2)-féleképpen stb. Tehát a válasz (26-k)*(26-k-1)*...*(26-(n-1)) (mivel
-# n-k karaktert kell lefixálnunk és (n-1)-(k)+1=n-k)
+# Ha n hosszu a szo es mar k karakter fix akkor az elso nem fix karakter
+# (26-k)-felekeppen valaszthato, a masodik (26-k-1)-felekeppen, majd
+# (26-k-2)-felekeppen stb. Tehat a valasz (26-k)*(26-k-1)*...*(26-(n-1)) (mivel
+# n-k karaktert kell lefixalnunk es (n-1)-(k)+1=n-k)
 
 N = int(input())
 L = input().split()

@@ -1,7 +1,7 @@
 '''
-Adott sor kvázi-izogram, ha a benne leggyakrabban előforduló betű gyakorisága legfeljebb 2 (vagy egyáltalán nem fordult benne elő betű).
-A gyakoriságok számontartásához használhatunk például tömböt vagy szótárat (C++ nyelven std::map vagy std::unordered_map).
-Fontos, hogy csak a betűkkel foglalkozzunk, az egyéb karaktereket hagyjuk figyelmen kívül.
+Adott sor kvazi-izogram, ha a benne leggyakrabban elofordulo betu gyakorisaga legfeljebb 2 (vagy egyaltalan nem fordult benne elo betu).
+A gyakorisagok szamontartasahoz hasznalhatunk peldaul tombot vagy szotarat (C++ nyelven std::map vagy std::unordered_map).
+Fontos, hogy csak a betukkel foglalkozzunk, az egyeb karaktereket hagyjuk figyelmen kivul.
 '''
 
 from collections import defaultdict

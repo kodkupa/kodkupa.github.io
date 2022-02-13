@@ -1,8 +1,8 @@
 '''
-Minden kockára szimuláljuk a játékot. 
-Az i-edik kockával dobva egy kör során először i-t lépünk, majd addig ugrálunk előre, amíg az alábbi két feltétel mindegyike teljesül:
-1. Nem értünk a pálya végére.
-2. Az ugrani kívánt hossz pozitív (azaz nem 0).
+Minden kockara szimulaljuk a jatekot. 
+Az i-edik kockaval dobva egy kor soran eloszor i-t lepunk, majd addig ugralunk elore, amig az alabbi ket feltetel mindegyike teljesul:
+1. Nem ertunk a palya vegere.
+2. Az ugrani kivant hossz pozitiv (azaz nem 0).
 '''
 
 n = int(input())

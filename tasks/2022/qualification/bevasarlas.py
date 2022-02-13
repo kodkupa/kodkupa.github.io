@@ -1,23 +1,23 @@
-# Bevásárlás megoldás
+# Bevasarlas megoldas
 
-# Mohó elv alapján érdemes választani a gyümölcsleveket, először megveszünk a
-# legolcsóbból annyit amennyit csak tudunk, aztán a második legolcsóbból és
-# végül a harmadikból.
+# Moho elv alapjan erdemes valasztani a gyumolcsleveket, eloszor megveszunk a
+# legolcsobbol annyit amennyit csak tudunk, aztan a masodik legolcsobbol es
+# vegul a harmadikbol.
 
 a = int(input())
 b = int(input())
 c = int(input())
-# Ha nincs összesen 10 doboz, akkor a megoldás -1.
+# Ha nincs osszesen 10 doboz, akkor a megoldas -1.
 if (a + b + c < 10):
     print(-1)
-# Ha van legalább 10 almalé, akkor csak azt veszünk.
+# Ha van legalabb 10 almale, akkor csak azt veszunk.
 elif (a >= 10):
     print(10 * 300)
-# Egyébként megvesszük az összes almalevet, és ha baracklével együtt megvan
-# a 10 doboz, akkor azokkal egészítjük ki.
+# Egyebkent megvesszuk az osszes almalevet, es ha baracklevel egyutt megvan
+# a 10 doboz, akkor azokkal egeszitjuk ki.
 elif (a + b >= 10):
     print(a * 300 + (10 - a) * 350)
-# Ha nem elég az alma + barack, akkor mindet megvesszük és a maradékot
-# pedig cseresznyéből, amennyi kell a 10 dobozhoz.
+# Ha nem eleg az alma + barack, akkor mindet megvesszuk es a maradekot
+# pedig cseresznyebol, amennyi kell a 10 dobozhoz.
 else:
     print(a * 300 + b * 350 + (10 - a - b) * 400)

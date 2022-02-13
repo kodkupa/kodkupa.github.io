@@ -1,12 +1,12 @@
 /*
-1. Minden ellenőrző pont párra (a kiindulási és végpontot is beleértve) meg kell mondanunk a legrövidebb utat közöttük, ezt megtehetjük a Floyd-Warshall algoritmussal,
-ami minden pontpár között kiszámítja a legrövidebb utat O(N^3) időben.
-2. Ha adott az ellenőrző pontok egy sorrendje (a kiindulási és végpontot is beleértve), a távolságszempontjából csak azon párok számítanak, amik között futva kell közlekedni
-a párok sorrendje irreleváns. Emiatt a sorrend helyett elegendő, ha a párokat határozzuk meg, ami az ellenőrző pontok egy maximális összegű teljes párosítása (minden pontnak pontosan
-egy párja van, és a párokat összekötő élek összege maximális) egy olyan teljes gráfban, ami az ellenőrző pontokat tartalmazza és a pontokat összekötő élek súlya az eredeti gráfban
-a közöttük lévő legrövidebb út hossza. Teljes párosítás biztosan létezik mert K+2 pont van és K páros. Egy maximális összegű teljes párosítást a súlyozott Blossom algoritmussal tudunk
-keresni O(K^3) időben (a megvalósításban a Blossom algoritmus mindenképpen N pontra fut le így O(N^3) a futásideje).
-Komplexitás: O(N^3)
+1. Minden ellenorzo pont parra (a kiindulasi es vegpontot is beleertve) meg kell mondanunk a legrovidebb utat kozottuk, ezt megtehetjuk a Floyd-Warshall algoritmussal,
+ami minden pontpar kozott kiszamitja a legrovidebb utat O(N^3) idoben.
+2. Ha adott az ellenorzo pontok egy sorrendje (a kiindulasi es vegpontot is beleertve), a tavolsagszempontjabol csak azon parok szamitanak, amik kozott futva kell kozlekedni
+a parok sorrendje irrelevans. Emiatt a sorrend helyett elegendo, ha a parokat hatarozzuk meg, ami az ellenorzo pontok egy maximalis osszegu teljes parositasa (minden pontnak pontosan
+egy parja van, es a parokat osszekoto elek osszege maximalis) egy olyan teljes grafban, ami az ellenorzo pontokat tartalmazza es a pontokat osszekoto elek sulya az eredeti grafban
+a kozottuk levo legrovidebb ut hossza. Teljes parositas biztosan letezik mert K+2 pont van es K paros. Egy maximalis osszegu teljes parositast a sulyozott Blossom algoritmussal tudunk
+keresni O(K^3) idoben (a megvalositasban a Blossom algoritmus mindenkeppen N pontra fut le igy O(N^3) a futasideje).
+Komplexitas: O(N^3)
 */
 
 #include <bits/stdc++.h>

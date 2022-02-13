@@ -1,7 +1,7 @@
 /*
-Adott sor kvázi-izogram, ha bármely benne előforduló betű gyakorisága legfeljebb 2.
-A gyakoriságok számontartásához használhatunk például tömböt vagy szótárat (std::map vagy std::unordered_map).
-Fontos, hogy csak a betűkkel foglalkozzunk, az egyéb karaktereket hagyjuk figyelmen kívül.
+Adott sor kvazi-izogram, ha barmely benne elofordulo betu gyakorisaga legfeljebb 2.
+A gyakorisagok szamontartasahoz hasznalhatunk peldaul tombot vagy szotarat (std::map vagy std::unordered_map).
+Fontos, hogy csak a betukkel foglalkozzunk, az egyeb karaktereket hagyjuk figyelmen kivul.
 */
 
 #include <bits/stdc++.h>
