@@ -3957,7 +3957,7 @@ table.content ul {
 			.box {
 				border-radius: 0;
 				box-shadow: none;
-				margin: 1em 0 0 0;
+				margin: 1em 0 1em 0;
 				padding: 3em 1em !important;
 			}
 
