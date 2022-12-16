@@ -1,3 +1,18 @@
+/*
+(Here the two trees are tree A and tree B)
+For every weighted edge (x, y, w), store it in node x in tree A, also do the same for all the queries, store query (u, v) in node u in tree A.
+Do a tree traversal in tree A, when entering a node, activate the weighted edges starting from it, when leaving the node deactivate them.
+       -When activating edge (x, y, w), increment all the values of all nodes in the subtree of y in tree B, with the weight of the edge (w) using a fenwick tree or segment tree (or any range update data structure). (Initially every node value is 0.)
+       -When deactivating you need to decrement.
+That way when we reach node u in tree A, the answer for any query (u, v) will be the value of node v in tree B.
+Proof:  This is the sum of weights of edges (x, y, w), where x is an ancestor of u (, because only these edges are activated), and y is an ancestor of v, because v must be on the subtree of y if it's value increased.
+
+Subtask1: brute force
+Subtask2: requires the tree traversal idea, but you can iterate through the ancestors of node u or v (in the less deep tree)
+Subtask3: one of the trees is a bamboo, so do not need to know the subtree update, just simple range update
+Subtask4: Full solution
+*/
+
 #include <iostream>
 #include <cassert>
 #include <vector>
