@@ -25,13 +25,13 @@
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
 	.scores {
 		display: none;
 	}
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
 	.school {
 		display: none;
 	}
