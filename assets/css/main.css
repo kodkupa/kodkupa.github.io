@@ -4,6 +4,10 @@
 
 /* My code */
 
+.features-row p {
+	margin: 0;
+}
+
 .fullrow {
 	text-align: center;
 	font-weight: bold;
@@ -65,14 +69,6 @@ header img {
 
 #banner p {
 	font-weight: bolder;
-}
-
-#njszt {
-	padding-bottom: 1.6em;
-}
-
-#algopro {
-	padding-top: 0.9em;
 }
 
 .box.special p {
