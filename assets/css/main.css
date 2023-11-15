@@ -4,6 +4,10 @@
 
 /* My code */
 
+.results h3 {
+	margin-top: 1em;
+}
+
 .features-row p {
 	margin: 0;
 }
