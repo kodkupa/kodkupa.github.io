@@ -1,47 +1,59 @@
 // @check-accepted: examples NQsmall Qsmall Bsmall full
 #include <bits/stdc++.h>
+
 using namespace std;
 
-const int B = 20;
+const int max_size = 2e5 + 100, INF = 2e9;
 
-int main(){
+int v[max_size], dist[21][max_size];
+vector<int> adj[max_size];
+
+void bfs(int bit, int start) {
+    queue<int> q;
+    q.push(start);
+    dist[bit][start] = 1;
+    while (!q.empty()) {
+        int nod = q.front();
+        q.pop();
+        for (auto nei : adj[nod]) {
+            if (dist[bit][nei] == INF) {
+                dist[bit][nei] = dist[bit][nod] + 1;
+                q.push(nei);
+            }
+        }
+    }
+}
+
+int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
-
     int n, q;
-    cin>>n>>q;
-
-    vector<int> v(n), masks(1<<B);
-    for(int i = 0; i < n; i++){
-        cin>>v[i];
-        masks[v[i]] = v[i];
-    }
-
-    for(int i = (1<<B) - 1; i > 0; i--){
-        int b = __builtin_ctz(i);
-        masks[i^(1<<b)] |= masks[i];
-        masks[(1<<b)] |= masks[i];
-    }
-    masks[0] = 0;
-    for(int i = 1; i < (1<<B); i++){
-        int b = __builtin_ctz(i);
-        masks[i] |= masks[i^(1<<b)];
-        masks[i] |= masks[(1<<b)];
-    }
-
-    for(int i = 0; i < q; i++){
-        int x, y;
-        cin>>x>>y;
-        x = v[x - 1];
-        y = v[y - 1];
-        int ans = 1;
-        while((x&y) == 0 && masks[x] != x){
-            x = masks[x];
-            ans++;
+    cin >> n >> q;
+    for (int i = 1; i <= n; i++) {
+        cin >> v[i];
+        for (int e = 0; e <= 20; e++) {
+            if ((v[i] & (1 << e)) != 0) {
+                adj[i].push_back(n + e + 1);
+                adj[n + e + 1].push_back(i);
+            }
         }
-
-        cout << ((x&y) == 0 ? -1 : ans) << '\n';
     }
-
+    for (int i = 1; i <= n + 21; i++) {
+        for (int j = 0; j <= 20; j++) {
+            dist[j][i] = INF;
+        }
+    }
+    for (int j = 0; j <= 20; j++) {
+        bfs(j, n + j + 1);
+    }
+    while (q--) {
+        int ans = INF, x, y;
+        cin >> x >> y;
+        for (int j = 0; j <= 20; j++) {
+            if (v[x] & (1 << j)) ans = min(ans, dist[j][y]);
+        }
+        cout << (ans == INF ? -1 : ans / 2) << '\n';
+    }
+    cout << '\n';
     return 0;
 }
