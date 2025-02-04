@@ -7,7 +7,7 @@ using i64 = long long;
 int LIS(vector<i64> &a) {
     vector<i64> lis;
     for (auto x : a) {
-        if(x < 0)continue;
+        if (x <= 0) continue;
         auto it = lower_bound(lis.begin(), lis.end(), x);
         if (it == lis.end()) {
             lis.push_back(x);
@@ -15,7 +15,7 @@ int LIS(vector<i64> &a) {
             *it = x;
         }
     }
-    return lis.size();
+    return lower_bound(lis.begin(), lis.end(), a.back()) - lis.begin() + 1;
 }
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         cin >> A[i];
         assert(A[i] >= -1e9 && A[i] <= 1e9);
-        if(i >= 0)A[i] += A[i - 1];
+        if (i > 0) A[i] += A[i - 1];
     }
     cout << LIS(A) << "\n";
     return 0;
