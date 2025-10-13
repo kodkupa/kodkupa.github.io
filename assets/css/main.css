@@ -57,7 +57,7 @@
 	font-size: 13pt;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1280px) {
 	#main table th {
 		font-size: 11pt;
 	}

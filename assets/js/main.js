@@ -111,6 +111,10 @@
 			})
 			.each(function() {
 
+				// External link.
+				if ($(this).attr('href').startsWith('https://'))
+					return;
+
 				var	$this = $(this),
 					id = $this.attr('href'),
 					$section = $(id);
